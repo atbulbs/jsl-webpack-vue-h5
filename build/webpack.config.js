@@ -4,12 +4,12 @@ const devConfig = require('./devConfig')
 const prodConfig = require('./prodConfig')
 const isDev = require('./utils/isDev')
 
-let config
+let webpackConfig = null
 
 if (isDev) {
-  config = merge(commonConfig, devConfig)
+  webpackConfig = merge(commonConfig, devConfig)
 } else {
-  config = merge(commonConfig, prodConfig)
+  webpackConfig = merge(commonConfig, prodConfig)
 }
 
-module.exports = config
+module.exports = webpackConfig
