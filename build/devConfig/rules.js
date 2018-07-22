@@ -43,7 +43,7 @@ const rulesConfig = [
     ]
   },
   {
-    test: /\.styl$/,
+    test: /\.styl(us)?$/,
     use: [
       'vue-style-loader',
       'css-loader',

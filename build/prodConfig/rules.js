@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const rulesConfig = [
   {
-    test: /\.styl$/,
+    test: /\.styl(us)?$/,
     use: [
       MiniCssExtractPlugin.loader,
       {

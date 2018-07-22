@@ -18,10 +18,9 @@ export default {
 
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-.app-main{
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-}
+.app-main
+  width 100%
+  height 100%
+  font-size 14px
 </style>
 
