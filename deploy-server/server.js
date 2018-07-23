@@ -3,8 +3,28 @@ const path = require('path')
 const Static = require('koa-static')
 const proxy = require('http-proxy-middleware')
 const send = require('koa-send')
+const history = require('koa-connect-history-api-fallback')
 
 const app = new Koa()
+
+app.use(history({
+  verbose: true,
+  disableDotRule: true,
+  rewrites: [
+    {
+      from: /.css$/,
+      to: function(context) {
+        return '' + context.parsedUrl.pathname.slice(-17)
+      }
+    },
+    {
+      from: /.js$/,
+      to: function(context) {
+        return '' + context.parsedUrl.pathname.slice(-16)
+      }
+    }
+  ]
+}))
 
 const Public = Static(path.join(__dirname, '../dist'))
 app.use(Public)
