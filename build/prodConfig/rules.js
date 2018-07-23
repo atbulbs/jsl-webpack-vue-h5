@@ -1,6 +1,7 @@
+const commonRules = require('../commonRules')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const rulesConfig = [
+const prodRules = [
   {
     test: /\.styl(us)?$/,
     use: [
@@ -52,5 +53,7 @@ const rulesConfig = [
     ]
   }
 ]
+
+const rulesConfig = [...commonRules, ...prodRules]
 
 module.exports = rulesConfig
