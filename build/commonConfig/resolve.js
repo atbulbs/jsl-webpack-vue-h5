@@ -8,7 +8,7 @@ const resolveConfig = {
     'js': resolve('src/assets/js'),
     'styles': resolve('src/assets/styles'),
     'images': resolve('src/assets/images'),
-    'libs': resolve('src/assets/libs')
+    'libs': resolve('src/libs')
   }
 }
 
