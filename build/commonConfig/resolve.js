@@ -5,6 +5,7 @@ const resolveConfig = {
   alias: {
     '@': resolve('src'),
     'pages': resolve('src/pages'),
+    'api': resolve('src/api'),
     'components': resolve('src/components'),
     'base-components': resolve('src/base-components'),
     'js': resolve('src/assets/js'),
