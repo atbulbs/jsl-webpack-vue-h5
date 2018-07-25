@@ -12,15 +12,16 @@ app.use(history({
   disableDotRule: true,
   rewrites: [
     {
-      from: /.css$/,
-      to: function(context) {
-        return '' + context.parsedUrl.pathname.slice(-17)
-      }
-    },
-    {
-      from: /.js$/,
-      to: function(context) {
-        return '' + context.parsedUrl.pathname.slice(-16)
+      from: /(js|css)$/,
+      to (ctx) {
+        const path = ctx.parsedUrl.pathname
+        const staticIndex = path.indexOf('/static')
+        if (staticIndex > -1) {
+          return path.slice(staticIndex)
+        } else {
+          const index = path.lastIndexOf('/')
+          return path.slice(index)
+        }
       }
     }
   ]

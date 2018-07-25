@@ -1,7 +1,10 @@
 const webpack = require('webpack')
 const commonPlugins = require('../commonPlugins')
-const  HotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin()
 
-const pluginsConfig = commonPlugins.concat(HotModuleReplacementPlugin)
+const devPlugins = [
+  new webpack.HotModuleReplacementPlugin()
+]
+
+const pluginsConfig = [...commonPlugins, ...devPlugins]
 
 module.exports = pluginsConfig

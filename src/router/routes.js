@@ -1,5 +1,6 @@
-import Home from 'pages/home.vue'
-import List from 'pages/list.vue'
+const Home = () => import('pages/home.vue')
+const List = () => import('pages/list.vue')
+const Item = () => import('pages/item.vue')
 
 export default [
   {
@@ -8,6 +9,7 @@ export default [
   },
   {
     path: '/home',
+    name: 'home',
     component: Home
   },
   {
@@ -15,7 +17,22 @@ export default [
     name: 'list',
     component: List,
     meta: {
-      metaData: 'it is a metaData'
-    }
+      metaData: 'it is metaData from list route',
+      scrollToBottom: true
+    },
+    children: [
+      {
+        path: '',
+        component: Item
+      },
+      {
+        path: 'item',
+        component: Item
+      }
+    ]
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]

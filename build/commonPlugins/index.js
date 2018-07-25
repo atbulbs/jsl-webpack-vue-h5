@@ -1,15 +1,8 @@
-const webpack = require('webpack')
 const HTMLPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const resolve = require('../utils/resolve')
-const isDev = require('../utils/isDev')
 
 const commonPlugins = [
-  new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: isDev ? '"development"' : '"production"'
-    }
-  }),
   new VueLoaderPlugin(),
   new HTMLPlugin({
     template: resolve('build/template.html'),

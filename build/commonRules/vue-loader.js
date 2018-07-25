@@ -1,5 +1,7 @@
-module.exports = () => {
-  return {
-    preserveWhitespace: false
+const vueLoaderOptions = {
+    compilerOptions: {
+      preserveWhitespace: false
+    }
   }
-}
+
+module.exports = vueLoaderOptions

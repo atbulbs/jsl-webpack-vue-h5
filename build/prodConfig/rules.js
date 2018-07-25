@@ -39,18 +39,6 @@ const prodRules = [
       },
       'less-loader'
     ]
-  },
-  {
-    test: /\.css$/,
-    use: [
-      MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader',
-        options: {
-          minimize: true
-        }
-      }
-    ]
   }
 ]
 

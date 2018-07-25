@@ -5,7 +5,7 @@
   "author": "8bulbs atbulbs@gmail.com",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress --config build/webpack.config.js",
     "start": "npm run dev",
     "build": "npm run clean && npm run build:dev",
     "build:dev": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
