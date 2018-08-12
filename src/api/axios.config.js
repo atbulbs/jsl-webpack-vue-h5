@@ -1,7 +1,12 @@
 import axios from 'axios'
+import {
+  defaultTimeout,
+  defaultContentType,
+  statusCodeMap
+} from 'js/constants-define'
 
-axios.defaults.timeout = 30000
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
+axios.defaults.timeout = defaultTimeout
+axios.defaults.headers.post['Content-Type'] = defaultContentType
 
 axios.interceptors.request.use(
   config => {
@@ -28,16 +33,10 @@ axios.interceptors.response.use(
       console.log('请求超时')
       return Promise.reject(err)
     }
-    const statusCode = err.response.status
-    const statusCodeMap = {
-      301: '永久重定向',
-      400: '请求语法错误',
-      401: '未授权',
-      403: '禁止访问',
-      404: '没有资源',
-      500: '服务器错误',
-      503: '服务器错误'
+    if (!err) {
+      return
     }
+    const statusCode = err.response.status
     console.log(statusCodeMap[statusCode] || '未知网络请求错误')
     return Promise.reject(err)
   }
