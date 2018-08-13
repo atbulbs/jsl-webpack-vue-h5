@@ -11,7 +11,7 @@ import 'styles/index.styl'
 import store from './store'
 import axios from 'axios'
 
-import { wechatConfig } from 'js/wechat'
+import { wechatConfig } from 'js/wechat-config'
 
 if (process.env.NODE_ENV !== 'production') {
   axios.defaults.baseURL = '/api/'
