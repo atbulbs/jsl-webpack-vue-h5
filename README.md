@@ -10,7 +10,7 @@
   代码仓库  [https://github.com/8bulbs/vaccine-search](https://github.com/8bulbs/vaccine-search)
 
 
-## build with the latest dependencies version
+## build with the latest version of dependencies
 
 ``` bash
 # clone repository
