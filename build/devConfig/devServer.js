@@ -1,12 +1,12 @@
 const devServerConfig = {
-  host: 'localhost',
+  host: '0.0.0.0',
   port: 8007,
   headers: {
     'Access-Control-Allow-Origins': '*'
   },
   proxy: {
     '/api': {
-      target: 'http:yourIPAddress',
+      target: 'yourServer',
       changeOrigin: true,
       pathRewrite: {
         '^/api': '/'
