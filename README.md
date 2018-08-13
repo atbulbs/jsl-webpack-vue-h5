@@ -4,18 +4,36 @@
 ## build with the latest dependencies version
 
 ``` bash
-# install ncu and run it
-npm install -g npm-check-updates
-ncu -a
+# install ncu at global
+$ npm install -g npm-check-updates
+
+# use ncu
+$ ncu -a
 
 # install dependencies
-npm install
+$ npm install
 
 # run the develop server
-npm start
+$ npm start
 
 # build for production with minification
-npm run build
+$ npm run build
+
+```
+## to deploy your project
+
+```bash
+# change directory
+$ cd deploy-server
+
+# install dependencies
+$ npm install
+
+# install pm2 at global to manager your production process
+$ npm install pm2 -g
+
+# run the deploy server with pm2
+$ pm2 start server.js --watch
 
 ```
 
