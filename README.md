@@ -20,7 +20,7 @@ $ npm start
 $ npm run build
 
 ```
-## to deploy your project
+## to deploy your project (proxy and history mode is surported)
 
 ```bash
 # change directory

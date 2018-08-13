@@ -42,7 +42,7 @@ const favicon = async (ctx, next) => {
 app.use(favicon)
 
 const proxyOptions = {
-  target: 'http://yourIPAddress',
+  target: 'yourServerUrl',
   changeOrigin: true,
   pathRewrite: {
     '^/api': '/'

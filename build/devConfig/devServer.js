@@ -6,7 +6,7 @@ const devServerConfig = {
   },
   proxy: {
     '/api': {
-      target: 'yourServer',
+      target: 'yourServerUrl',
       changeOrigin: true,
       pathRewrite: {
         '^/api': '/'
