@@ -1,3 +1,21 @@
+with-bg($url, $width, $height)
+  width $width
+  height $height
+  background url($url) no-repeat
+  background-size $width $height
+
+with-bg-fs($url)
+  width 375px
+  height 667px
+  background url($url) no-repeat
+  background-size 375px 667px
+
+absolute-center()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
 bg-image($url)
   background-image: url($url + "@2x.png")
   @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
