@@ -11,7 +11,9 @@ import 'styles/index.styl'
 import store from './store'
 import axios from 'axios'
 
-import { wechatConfig } from 'js/wechat-config'
+// import { wechatConfig } from 'js/wechat-config'
+
+// wechatConfig()
 
 if (process.env.NODE_ENV !== 'production') {
   axios.defaults.baseURL = '/api/'
@@ -19,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   axios.defaults.baseURL = '/'
 }
 
-wechatConfig()
 
 fastclick.attach(document.body)
 

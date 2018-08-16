@@ -1,5 +1,6 @@
 const devServerConfig = {
-  host: '0.0.0.0',
+  // host: '0.0.0.0',
+  host: 'localhost',
   port: 8007,
   headers: {
     'Access-Control-Allow-Origins': '*'
@@ -18,8 +19,8 @@ const devServerConfig = {
   },
   historyApiFallback: true,
   hot: true,
-  open: true,
-  openPage: 'base-url/home'
+  open: true
+  // openPage: 'base-url/home'
 }
 
 module.exports = devServerConfig
