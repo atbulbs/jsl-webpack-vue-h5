@@ -96,6 +96,28 @@ export function getSignature () {
 
 > ### 8. 一定要在微信端, 安卓原生APP端, 与iOS APP端都跑一跑, 安卓和iOS的webview不一样, 特别是iOS修改配置然后发版太蛋疼
 
+> ### 9. 如果需要对ios和android的webview做区别处理, 可以让原生的同学设置用户代理的信息, 加入关键字
+```javascript
+// 微信端的ua关键字与原生自定义的ua关键字
+export const uaKeyWordsMap = {
+  isInWechat: 'micromessenger',
+  isInAndroidApp: 'TSH-Android',
+  isInIosApp: 'TSH-iOS'
+}
+// 获取H5的运行时环境
+export function getH5Runtime () {
+  let result = ''
+  const ua = window.navigator.userAgent.toLowerCase()
+  Object.keys(uaKeyWordsMap).forEach((runtime) => {
+    const uaKeyWord = uaKeyWordsMap[runtime].toLowerCase()
+    if (ua.indexOf(uaKeyWord) > -1) {
+      result = runtime
+    }
+  })
+  return result
+}
+```
+
 ## build with the latest version of dependencies
 
 ``` bash
