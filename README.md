@@ -1,5 +1,5 @@
 # 8bulbs-project webpack-vue
-> 模块化强迫症:joy:的webpack-vue配置,采用最新的webpack v-4.16和vue-loader v-15.3, 开箱:package:即用, 引入vw适配和wechat-js-sdk,二次封装axios,更高效:rocket:更激爽:kiss:的构建H5项目
+> 模块化强迫症:joy:webpack配置工程师:sunglasses:的webpack-vue配置,采用最新的webpack v-4.16和vue-loader v-15.3, 开箱:package:即用, 引入vw适配和wechat-js-sdk,二次封装axios,更高效:rocket:更激爽:kiss:的构建H5项目
 
 ## 基于此配置构建的H5项目
 1. 公司年庆宣传, 仿跳一跳  [https://operation.mobile.taikang.com/jump/](https://operation.mobile.taikang.com/jump/)
@@ -8,7 +8,93 @@
   代码仓库  [https://github.com/8bulbs/star-face](https://github.com/8bulbs/star-face)
 3. 疫苗查询  [https://operation.mobile.taikang.com/vaccine/](https://operation.mobile.taikang.com/vaccine/)
   代码仓库  [https://github.com/8bulbs/vaccine-search](https://github.com/8bulbs/vaccine-search)
+4. 心理年龄测试 [https://operation.mobile.taikang.com/agetest/](https://operation.mobile.taikang.com/agetest/)
+  代码仓库  [https://github.com/8bulbs/psychological-age-test](https://github.com/8bulbs/psychological-age-test)
 
+## 基于此配置构建的组件/插件库
+git仓库地址  [https://github.com/8bulbs/jsl-vue-h5](https://github.com/8bulbs/jsl-vue-h5)
+npm地址  [https://www.npmjs.com/package/jsl-vue-h5](https://www.npmjs.com/package/jsl-vue-h5)
+
+## H5开发经典爬坑风骚姿势集锦之top n
+> ### 1. 图片在ios端为空白
+> a方案: 给img加父级div, 设置父级div的高宽, 再给img设置宽度100%, a方法缺点, 增加了不必要的dom元素;
+> b方案: 用div背景图取代img标签, 此方法虽简单粗暴, 不太好做懒加载, 而且在微信端用户无法保存图片或者识别图片中的二维码;
+> 总结: 根据不同的图片展示用途选择方案
+
+> ### 2. 模态框里的选择列表滑动时, 浮层下面的视图会跟随滚动
+>方案: 模态框展示时, 让body固定定位, 模态框不展示时, 再取消body的固定定位
+```javascript
+// 定义方法-是否暂停body滚动
+isStopBodyScroll (flag) {
+  const bodyStyle = document.body.style
+  const top = 0
+  if (flag) {
+    top = window.scrollY
+    bodyStyle.position = 'fixed'
+    // console.log('body is fixed')
+    bodyStyle.top = -top + 'px'
+  } else {
+    bodyStyle.position = ''
+    // console.log('body is not fixed')
+    bodyStyle.top = ''
+    window.scrollTo(0, top)
+  }
+}
+```
+> ### 3. 浏览器厂商安全策略, audio标签只能在用户交互后才能播放
+>a. 在微信端: audio的play方法放在 wx.ready(callback) 回调里执行, 若用户在第三方浏览器比如UC打开, wx.ready 也会执行
+>b. 在原生APP端: 可让原生同学提供模拟用户点击webview的方法, 调用此方法并传入播放音乐的回调, 或者用更简单的办法让原生修改webview设置
+```java
+// 设置媒体播放不需要用户的手势
+webView.getSettings().setMediaPlaybackRequiresUserGesture(false)
+```
+> 源码见上方案例 跳一跳H5
+```javascript
+// src/assets/js/wechat-config.js
+export async function wechatConfig (callBack) {
+  const res = await getSignature()
+  const data = res.data
+  const configObj = {
+    debug: false,
+    appId,
+    timestamp: data.timestamp,
+    nonceStr: data.noncestr,
+    signature: data.signature,
+    jsApiList
+  }
+  wx.config(configObj)
+  wx.ready(() => {
+    callBack()
+    wechatShareConfig()
+  })
+}
+
+// src/components/jsl-player.vue
+mounted () {
+  this.setPlayerBg(playImg)
+  this.startRotate()
+  if (isInWechat()) {
+    wechatConfig(this.audioPlay)
+  } else {
+    this.audioPlay()
+  }
+}
+```
+> ### 4. 开发时, 若从微信平台获取签名的接口, 与其他接口不在同一个服务器, 可在devServer里设置两个代理, 解决跨域, 测试与生产服务器必须有公网域名才能获取合法签名, 还需后端同学申请访问获取签名服务器的权限
+
+> ### 5. 获取微信签名的接口, url应采用拼接的方式传入axios, 不然冒号和斜杠会被encodeURIComponent, 导致获取的签名不合法
+
+```javascript
+export function getSignature () {
+  return $.get('/tkmap/wechat/jsapi/getSignature.do?appId=' + appId + '&url=' + url)
+}
+```
+
+> ### 6. 注册微信分享的信息, 必须放在wx.ready(callback)回调里, 不然会出现用户分享后的文案与图片显示异常
+
+> ### 7. 样式采用VW单位, 每个独立的小图尽量都切出来, 不然会在不同尺寸的终端变形
+
+> ### 8. 一定要在微信端, 安卓原生APP端, 与iOS APP端都跑一跑, 安卓和iOS的webview不一样, 特别是iOS修改配置然后发版太蛋疼
 
 ## build with the latest version of dependencies
 
