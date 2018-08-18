@@ -118,6 +118,14 @@ export function getH5Runtime () {
 }
 ```
 
+> ### 10. 文字小于14px的处理, 注意要作用在块级元素
+```css
+span
+  display inline-block
+  transform scale(0.95)
+```
+
+
 ## build with the latest version of dependencies
 
 ``` bash
