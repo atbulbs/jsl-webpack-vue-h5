@@ -15,7 +15,7 @@
 git仓库地址  [https://github.com/8bulbs/jsl-vue-h5](https://github.com/8bulbs/jsl-vue-h5)
 npm地址  [https://www.npmjs.com/package/jsl-vue-h5](https://www.npmjs.com/package/jsl-vue-h5)
 
-## H5开发经典爬坑风骚姿势集锦之top n
+## H5开发经典风骚优雅爬坑姿势集锦之top n
 > ### 1. 图片在ios端为空白
 > a方案: 给img加父级div, 设置父级div的高宽, 再给img设置宽度100%, a方法缺点, 增加了不必要的dom元素;
 > b方案: 用div背景图取代img标签, 此方法虽简单粗暴, 不太好做懒加载, 而且在微信端用户无法保存图片或者识别图片中的二维码;
