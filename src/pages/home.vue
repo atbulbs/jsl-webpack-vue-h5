@@ -1,6 +1,10 @@
 <template>
  <div class="home-root">
-   it is home page
+   <div class="avatar">
+   </div>
+   <p class="welcome">
+    welcome to jsl-webpack-vue-h5
+   </p>
    <div @click="handleClick">
      <button>to list page</button>
    </div>
@@ -24,9 +28,6 @@ export default {
       })
     }
   },
-  components: {
-
-  },
   beforeRouteLeave (to, from, next) {
     // console.log('home to', to)
     // console.log('home from', from)
@@ -41,7 +42,13 @@ export default {
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
+@import '~styles/mixin'
 .home-root
   text-align center
-  padding-top 100px
+  padding-top 50px
+  .avatar
+    with-bg('../assets/images/avatar.jpg', 150px, 170px)
+    margin 0 auto
+  .welcome
+    margin 10px auto
 </style>
