@@ -1,6 +1,6 @@
-
 const state = {
-  autoJump: false
+  autoJump: false,
+  liveInfo: {}
 }
 
 export default state

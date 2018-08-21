@@ -8,7 +8,7 @@ import VueLazyload from 'vue-lazyload'
 
 import 'styles/index.styl'
 
-// import store from './store'
+import store from './store'
 import axios from 'axios'
 
 // import { wechatConfig } from 'js/wechat-config'
@@ -31,6 +31,6 @@ Vue.use(VueLazyload, {
 new Vue({
   el: '#app',
   router,
-  // store,
+  store,
   render: h => h(App)
 })

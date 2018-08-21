@@ -1,14 +1,20 @@
-const Home = () => import('pages/home.vue')
+const List = () => import('pages/list.vue')
+const Live = () => import('pages/live.vue')
 
 export default [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/list'
   },
   {
-    path: '/home',
-    name: 'home',
-    component: Home
+    path: '/list',
+    name: 'list',
+    component: List
+  },
+  {
+    path: '/live',
+    name: 'live',
+    component: Live
   },
   {
     path: '*',
