@@ -36,3 +36,7 @@ export function getH5Runtime () {
   })
   return result
 }
+
+export function toVw (num) {
+  return ((window.Number(num).toFixed(5) / 375) * 100).toFixed(5) + 'vw'
+}

@@ -60,6 +60,14 @@ const commonRulesConfig = [
       limit: 10000,
       name: 'static/fonts/[name].[hash:8].[ext]'
     }
+  },
+  {
+    test: /\.(mp3|mp4)(\?.*)?$/,
+    loader: 'url-loader',
+    options: {
+      name:'static/media/[name].[hash:8].[ext]',
+      limit:10
+    }
   }
 ]
 

@@ -1,37 +1,155 @@
-with-bg($url, $width, $height)
+@import "./variable.styl"
+
+// 行内块
+inline()
+  display inline-block
+
+// 小圆点
+dot($size, $color)
+  display inline-block
+  width $size
+  height $size
+  border-radius 100%
+  background-color $color
+
+// 模态对话框
+modal()
+  z-index 1000
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  background-color rgba(0, 0, 0, .6)
+
+// 占满宽度
+full-width($height)
+  width 375px
+  height $height
+
+// 直播的背景色
+live-bg()
+  background-color $color-live-bg
+
+// ios的导航条
+i-nav()
+  width 375px
+  height 44px
+
+// 头像
+avatar($size)
+  width $size
+  height $size
+  background-size $size $size
+  border-radius 100%
+
+// 描线
+stroke-line($width, $y)
+  width $width
+  border 0.5px solid #8A91A4
+  transform translateY($y)
+
+// 左浮动
+fl($margin-left)
+  float left
+  margin-left $margin-left
+
+// 文本行
+text-line($height, $font-size)
+  inline()
+  height $height
+  line-height $height
+  font-size $font-size
+
+// 带背景图
+with-bg($width, $height, $url)
   width $width
   height $height
-  background url($url) no-repeat
+  background-image url($url)
   background-size $width $height
 
+// 有背景图
+has-bg($width, $height)
+  width $width
+  height $height
+  background-size $width $height
+
+// 全屏带背景图
 with-bg-fs($url)
   width 375px
   height 667px
-  background url($url) no-repeat
+  background-image url($url)
   background-size 375px 667px
 
+// 绝对定位, left, top
+ab-lt($left, $top)
+  position absolute
+  top $top
+  left $left
+
+// 绝对定位, right, top
+ab-rt($right, $top)
+  position absolute
+  top $top
+  right $right
+
+// 绝对定位, left, bottom
+ab-lb($left, $bottom)
+  position absolute
+  left $left
+  bottom $bottom
+
+// 绝对定位, right, bottom
+ab-rb($right, $bottom)
+  position absolute
+  right $right
+  bottom $bottom
+
+ab-r($right)
+  position absolute
+  right $right
+  top 50%
+  transform translateY(-50%)
+
+// 绝对定位, 上下居中, left
+ab-l($left)
+  position absolute
+  left $left
+  top 50%
+  transform translateY(-50%)
+
+// 绝对定位, 左右居中, top
+ab-t($top)
+  position absolute
+  left 50%
+  top $top
+  transform translateX(-50%)
+
+// 绝对定位, 上下左右都居中
 absolute-center()
   position absolute
   top 50%
   left 50%
   transform translate(-50%, -50%)
 
+// 媒体查询适配背景图
 bg-image($url)
-  background-image: url($url + "@2x.png")
+  background-image url($url + "@2x.png")
   @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
-    background-image: url($url + "@3x.png")
+    background-image url($url + "@3x.png")
 
+// 不换行
 no-wrap()
-  text-overflow: ellipsis
-  overflow: hidden
-  white-space: nowrap
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
 
+// 扩展点击区域
 extend-click()
-  position: relative
   &:before
-    content: ''
-    position: absolute
-    top: -10px
-    left: -10px
-    right: -10px
-    bottom: -10px
+    content ''
+    position absolute
+    top -10px
+    left -10px
+    right -10px
+    bottom -10px

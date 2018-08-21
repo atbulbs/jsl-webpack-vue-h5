@@ -1,11 +1,11 @@
 import routes from './routes'
-import scrollBehavior from './scrollBehavior'
+// import scrollBehavior from './scrollBehavior'
 
 const RouterConfig = {
   // mode: 'history',
   // base: '/base-url/',
-  routes,
-  scrollBehavior
+  routes
+  // scrollBehavior
 }
 
 export default RouterConfig
