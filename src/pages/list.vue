@@ -1,6 +1,9 @@
 <template>
- <div class="list-root">
-   <jsl-navbar @click="goBack" title="泰直播" />
+  <div class="list-root">
+    <jsl-navbar
+      @click.native="goBack"
+      title="泰直播"
+    />
     <list-item
       v-for="(item, index) in dataList"
       :key="index + 'liveList'"
@@ -42,7 +45,7 @@ export default {
       this.isModalShow = false
     },
     goBack () {
-
+      this.$router.go(-1)
     }
   },
   components: {

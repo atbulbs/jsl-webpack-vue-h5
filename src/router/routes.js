@@ -1,10 +1,11 @@
-const List = () => import('pages/list.vue')
-const Live = () => import('pages/live.vue')
+const List = () => import('pages/list')
+const Live = () => import('pages/live')
+const Welcome = () => import('pages/welcome')
 
 export default [
   {
     path: '/',
-    redirect: '/list'
+    redirect: '/welcome'
   },
   {
     path: '/list',
@@ -15,6 +16,11 @@ export default [
     path: '/live',
     name: 'live',
     component: Live
+  },
+  {
+    path: '/welcome',
+    name: 'welcome',
+    component: Welcome
   },
   {
     path: '*',

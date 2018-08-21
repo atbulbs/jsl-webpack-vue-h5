@@ -57,4 +57,5 @@ export default {
 
 .button-root
   inline()
+  tac()
 </style>

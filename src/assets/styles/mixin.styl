@@ -1,5 +1,17 @@
 @import "./variable.styl"
 
+// 文本居中
+tac()
+  text-align center
+  
+// 字体大小
+fs($size)
+  font-size $size
+
+// 文本加粗
+bold()
+  font-weight bold
+
 // 行内块
 inline()
   display inline-block
@@ -126,7 +138,7 @@ ab-t($top)
   transform translateX(-50%)
 
 // 绝对定位, 上下左右都居中
-absolute-center()
+ab-c()
   position absolute
   top 50%
   left 50%
