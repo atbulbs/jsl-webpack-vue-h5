@@ -125,7 +125,7 @@ span
   transform scale(0.95)
 ```
 
-> ### 11. input框在ios平台, 须点击多次才能出发文件选择框, 解决办法, 加上 cursor: pointer, 我只想说这个小手是黑科技
+> ### 11. input框在ios平台, 须点击多次才能出发文件选择框, 解决办法, 加上 cursor: pointer, 我只想说这个小手是黑科技, 比较科学的解释是, 微信浏览器会把有小手的元素解析为a标签, 而微信里的click事件只在a标签上有效
 
 
 ## build with the latest version of dependencies
