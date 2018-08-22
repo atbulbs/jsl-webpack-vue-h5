@@ -6,11 +6,11 @@
       welcome to jsl-vue-webpack-h5
     </div>
     <div class="description">
-      a webpack-vue project build for h5 develop
+      a webpack-vue project build for h5 develop more efficient
     </div>
     <jsl-button
       text="click to demo"
-      @click.native="handleClick"
+      @click.native="$router.push({ name: 'list' })"
     />
   </div>
 </template>
@@ -20,13 +20,6 @@
 import JslButton from 'base-components/button/button'
 
 export default {
-  methods: {
-    handleClick () {
-      this.$router.push({
-        name: 'list'
-      })
-    }
-  },
   components: {
     JslButton
   }
