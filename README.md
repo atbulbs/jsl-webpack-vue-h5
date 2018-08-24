@@ -1,19 +1,21 @@
 # 8bulbs-project webpack-vue
 > 模块化强迫症:joy:webpack配置工程师:sunglasses:的webpack-vue配置,采用最新的webpack v-4.16和vue-loader v-15.3, 开箱:package:即用, 引入vw适配(建议UI图为375px宽度, 写px单位会自动转为vw)和wechat-js-sdk(方便二次分享以及调用微信其他API),二次封装axios,更高效:rocket:更激爽:kiss:的构建H5项目
 
+## 基于此配置构建的组件/插件库, 自己撸的一些小轮子, welcome npm install :smile:
+npm package  [https://www.npmjs.com/package/jsl-vue-h5](https://www.npmjs.com/package/jsl-vue-h5)
+git仓库  [https://github.com/8bulbs/jsl-vue-h5](https://github.com/8bulbs/jsl-vue-h5)
+demo仓库 [https://github.com/8bulbs/jsl-vue-h5-demo](https://github.com/8bulbs/jsl-vue-h5-demo)
+
 ## 基于此配置构建的H5项目
 1. 公司年庆宣传跳一跳小游戏  [https://operation.mobile.taikang.com/jump/](https://operation.mobile.taikang.com/jump/)
-  代码仓库  [https://github.com/8bulbs/tk-jump](https://github.com/8bulbs/tk-jump)
+  git仓库  [https://github.com/8bulbs/tk-jump](https://github.com/8bulbs/tk-jump)
 2. 明星脸  [https://operation.mobile.taikang.com/testface/](https://operation.mobile.taikang.com/testface/)
-  代码仓库  [https://github.com/8bulbs/star-face](https://github.com/8bulbs/star-face)
+  git仓库  [https://github.com/8bulbs/star-face](https://github.com/8bulbs/star-face)
 3. 疫苗查询  [https://operation.mobile.taikang.com/vaccine/](https://operation.mobile.taikang.com/vaccine/)
-  代码仓库  [https://github.com/8bulbs/vaccine-search](https://github.com/8bulbs/vaccine-search)
+  git仓库  [https://github.com/8bulbs/vaccine-search](https://github.com/8bulbs/vaccine-search)
 4. 心理年龄测试 [https://operation.mobile.taikang.com/agetest/](https://operation.mobile.taikang.com/agetest/)
-  代码仓库  [https://github.com/8bulbs/psychological-age-test](https://github.com/8bulbs/psychological-age-test)
+  git仓库  [https://github.com/8bulbs/psychological-age-test](https://github.com/8bulbs/psychological-age-test)
 
-## 基于此配置构建的组件/插件库
-git仓库地址  [https://github.com/8bulbs/jsl-vue-h5](https://github.com/8bulbs/jsl-vue-h5)
-npm地址  [https://www.npmjs.com/package/jsl-vue-h5](https://www.npmjs.com/package/jsl-vue-h5)
 
 ## H5开发经典风骚优雅爬坑姿势集锦之top n
 > ### 1. 图片在ios端为空白
