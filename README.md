@@ -123,7 +123,7 @@ export const uaKeyWordsMap = {
   isInIosApp: 'TSH-iOS'
 }
 // 获取H5的运行时环境
-export function getH5Runtime () {
+export function getH5RuntimeEnv () {
   let result = ''
   const ua = window.navigator.userAgent.toLowerCase()
   Object.keys(uaKeyWordsMap).forEach((runtime) => {
