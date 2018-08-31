@@ -126,10 +126,10 @@ export const uaKeyWordsMap = {
 export function getH5RuntimeEnv () {
   let result = ''
   const ua = window.navigator.userAgent.toLowerCase()
-  Object.keys(uaKeyWordsMap).forEach((runtime) => {
-    const uaKeyWord = uaKeyWordsMap[runtime].toLowerCase()
+  Object.keys(uaKeyWordsMap).forEach((runtimeEnv) => {
+    const uaKeyWord = uaKeyWordsMap[runtimeEnv].toLowerCase()
     if (ua.indexOf(uaKeyWord) > -1) {
-      result = runtime
+      result = runtimeEnv
     }
   })
   return result
