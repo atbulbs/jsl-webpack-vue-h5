@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const prodPlugins = [
   new MiniCssExtractPlugin({
     filename: '[name].[chunkhash:8].css',
-    chunkFilename: '[id].css'
+    chunkFilename: '[name].[chunkhash:8].css'
   }),
   new webpack.NamedChunksPlugin()
 ]
