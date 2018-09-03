@@ -42,13 +42,8 @@ axios.interceptors.response.use(
   }
 )
 
-const get = async (url, params) => {
-  let res = null
-  if (params) {
-    res = await axios.get(url, {params})
-  } else {
-    res = await axios(url)
-  }
+const get = async (url, params = {}, headers = {}) => {
+  const res = await axios.get(url, { params, headers })
   return Promise.resolve(res)
 }
 
