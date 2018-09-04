@@ -17,7 +17,7 @@
 
 
 <script type="text/ecmascript-6">
-import { toVw } from 'libs/util'
+import { toVw } from 'shared/util'
 
 export default {
   props: {

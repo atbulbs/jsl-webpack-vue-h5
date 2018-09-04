@@ -3,7 +3,7 @@ import {
   defaultTimeout,
   defaultContentType,
   statusCodeMap
-} from 'js/constants-define'
+} from 'shared/constants-define'
 
 axios.defaults.timeout = defaultTimeout
 axios.defaults.headers.post['Content-Type'] = defaultContentType

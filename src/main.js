@@ -11,7 +11,7 @@ import 'styles/index.styl'
 import store from './store'
 import axios from 'axios'
 
-// import { wechatConfig } from 'js/wechat-config'
+// import { wechatConfig } from 'shared/wechat-config'
 
 // wechatConfig()
 

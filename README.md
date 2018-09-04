@@ -68,7 +68,7 @@ webView.getSettings().setMediaPlaybackRequiresUserGesture(false)
 ```
 > 源码见上方案例 跳一跳H5
 ```javascript
-// src/assets/js/wechat-config.js
+// src/assets/shared/wechat-config.js
 export async function wechatConfig (callBack) {
   const res = await getSignature()
   const data = res.data
@@ -209,8 +209,8 @@ $ pm2 start server.js --watch
 └─src
     ├─api
     │  └── ... # 抽取出API请求, axios的二次封装
-    ├─libs
-    │  └── ... # 工具类
+    ├─shared
+    │  └── ... # 工具类, 常量定义
     ├─assets
     │  ├─images
     │  └── ... # 图片资源

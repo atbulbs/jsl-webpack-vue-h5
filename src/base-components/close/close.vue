@@ -12,7 +12,7 @@
 
 
 <script type="text/ecmascript-6">
-import { toVw } from 'libs/util'
+import { toVw } from 'shared/util'
 import defaultImg from './cross.png'
 import circleImg from './cross-circle.png'
 

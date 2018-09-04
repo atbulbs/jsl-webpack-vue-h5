@@ -1,5 +1,5 @@
 import $ from 'api/axios.config'
-import { appId, url } from 'js/constants-define'
+import { appId, url } from 'shared/constants-define'
 
 export function getConfigInfo () {
   return $.get('/tkmap/wechat/getAppInfo.do', { appId }, { withCredentials: true })
