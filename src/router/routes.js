@@ -1,26 +1,20 @@
-const List = () => import('pages/list')
-const Live = () => import('pages/live')
-const Welcome = () => import('pages/welcome')
+const LoginPage = () => import('pages/login')
+const HomePage = () => import('pages/home')
 
 export default [
   {
     path: '/',
-    redirect: '/welcome'
+    redirect: '/login'
   },
   {
-    path: '/list',
-    name: 'list',
-    component: List
+    path: '/login',
+    name: 'login',
+    component: LoginPage
   },
   {
-    path: '/live',
-    name: 'live',
-    component: Live
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    component: Welcome
+    path: '/home',
+    name: 'home',
+    component: HomePage
   },
   {
     path: '*',
