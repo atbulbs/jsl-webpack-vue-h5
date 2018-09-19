@@ -82,7 +82,7 @@ mounted () {
 
 ```javascript
 export function getSignature () {
-  return $.get('/tkmap/wechat/jsapi/getSignature.do?appId=' + appId + '&url=' + url)
+  return $.get('/?appId=' + appId + '&url=' + url)
 }
 ```
 
@@ -93,7 +93,9 @@ export function getSignature () {
 > ### 8. 一定要在微信端, 安卓原生APP端, 与iOS APP端都跑一跑, 安卓和iOS的webview不一样, 特别是iOS修改配置然后发版太蛋疼
 
 > ### 9. 如果需要对ios和android的webview做区别处理, 可以让原生的同学设置用户代理的信息, 加入关键字
+
 ```javascript
+
 // 微信端的ua关键字与原生自定义的ua关键字
 export const uaKeyWordsMap = {
   isInWechat: 'micromessenger',
@@ -112,13 +114,16 @@ export function getH5RuntimeEnv () {
   })
   return result
 }
+
 ```
 
 > ### 10. 文字小于14px的处理, 注意要作用在块级元素
 ```css
+
 span
   display inline-block
   transform scale(0.95)
+  
 ```
 
 > ### 11. input框在ios平台, 须点击多次才能出发文件选择框, 解决办法, 加上 cursor: pointer, 我只想说这个小手是黑科技, 比较科学的解释是, 微信浏览器会把有小手的元素解析为a标签, 而微信里的click事件只在a标签上有效
