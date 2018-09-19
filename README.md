@@ -11,28 +11,6 @@
 
 >demo仓库 [https://github.com/8bulbs/jsl-vue-h5-demo](https://github.com/8bulbs/jsl-vue-h5-demo)
 
-## 基于此配置构建的H5项目
-1. 公司年庆宣传跳一跳小游戏
-> 线上地址 [https://operation.mobile.taikang.com/jump/](https://operation.mobile.taikang.com/jump/)
-
-> git仓库 [https://github.com/8bulbs/tk-jump](https://github.com/8bulbs/tk-jump)
-2. 明星脸
-> 线上地址 [https://operation.mobile.taikang.com/testface/](https://operation.mobile.taikang.com/testface/)
-
->  git仓库  [https://github.com/8bulbs/star-face](https://github.com/8bulbs/star-face)
-
-3. 疫苗查询
-
-> 线上地址 [https://operation.mobile.taikang.com/vaccine/](https://operation.mobile.taikang.com/vaccine/)
-
->  git仓库  [https://github.com/8bulbs/vaccine-search](https://github.com/8bulbs/vaccine-search)
-4. 心理年龄测试
-
-> 线上地址 [https://operation.mobile.taikang.com/agetest/](https://operation.mobile.taikang.com/agetest/)
-
-> git仓库  [https://github.com/8bulbs/psychological-age-test](https://github.com/8bulbs/psychological-age-test)
-
-
 ## H5开发经典风骚优雅爬坑姿势集锦之top n
 > ### 1. 图片在ios端为空白
 > a方案: 给img加父级div, 设置父级div的高宽, 再给img设置宽度100%, a方法缺点, 增加了不必要的dom元素;

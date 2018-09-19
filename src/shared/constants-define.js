@@ -25,6 +25,6 @@ export const wxShareInfo = {
   desc: '微信分享描述',
   type: '',
   dataUrl: '',
-  imgUrl: 'http://fans.images.wx.taikang.com/server/operation/jump/9e83172a118a0b552b3ed566f4905834.jpg',
-  link: 'https://operation.mobile.taikang.com/jump/'
+  imgUrl: '',
+  link: ''
 }
