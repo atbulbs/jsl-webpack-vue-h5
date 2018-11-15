@@ -12,7 +12,7 @@
 >demo仓库 [https://github.com/8bulbs/jsl-vue-h5-demo](https://github.com/8bulbs/jsl-vue-h5-demo)
 
 ## H5开发经典风骚优雅爬坑姿势集锦之top n
-> ### 1. 图片在ios端为空白
+> ### 1. 图片在某些ios端webview里为空白
 > a方案: 给img加父级div, 设置父级div的高宽, 再给img设置宽度100%, a方法缺点, 增加了不必要的dom元素;
 > b方案: 用div背景图取代img标签, 此方法虽简单粗暴, 不太好做懒加载, 而且在微信端用户无法保存图片或者识别图片中的二维码;
 > 总结: 根据不同的图片展示用途选择方案
@@ -123,7 +123,7 @@ export function getH5RuntimeEnv () {
 span
   display inline-block
   transform scale(0.95)
-  
+
 ```
 
 > ### 11. input框在ios平台, 须点击多次才能出发文件选择框, 解决办法, 加上 cursor: pointer, 我只想说这个小手是黑科技, 比较科学的解释是, 微信浏览器会把有小手的元素解析为a标签, 而微信里的click事件只在a标签上有效
