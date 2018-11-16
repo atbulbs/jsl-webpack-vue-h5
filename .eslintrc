@@ -1,0 +1,18 @@
+{
+  "extends": "standard",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": true
+  },
+  "plugins": ["html", "vue"],
+  "settings": {
+    "html/html-extensions": [".html"]
+  },
+  "rules": {
+    "no-new": "off",
+    "no-extend-native": "off"
+  }
+}
+

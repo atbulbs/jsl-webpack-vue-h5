@@ -1,6 +1,14 @@
+const resolve = require('../utils/resolve')
 const commonRules = require('../commonRules')
 
 const devRules = [
+  {
+    enforce: 'pre',
+    test: /.(jsx?|vue)$/,
+    loader: 'eslint-loader',
+    include: resolve('src'),
+    exclude: /node_modules/
+  },
   {
     test: /\.styl(us)?$/,
     use: [

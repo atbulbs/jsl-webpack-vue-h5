@@ -1,0 +1,4 @@
+*.sdk*
+
+# show demo
+src/main.js
