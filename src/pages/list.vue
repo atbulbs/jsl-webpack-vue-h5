@@ -2,7 +2,7 @@
   <div class="list-root">
     <jsl-navbar
       @click.native="goBack"
-      title="泰直播"
+      title="FE-live"
     />
     <list-item
       v-for="(item, index) in dataList"
@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       dataList: liveList,
-      isModalShow: true
+      isModalShow: false
     }
   },
   methods: {

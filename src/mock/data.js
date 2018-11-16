@@ -9,6 +9,14 @@ import giftImg2 from './images/gift2.png'
 
 export const liveList = [
   {
+    emcee: 'Front End',
+    avatarImg: avatarImg2,
+    bgImg: bgImg4,
+    title: '论合理需求避免干架的重要性',
+    status: '即将开始',
+    timeCount: '00:30:20'
+  },
+  {
     emcee: 'HTML',
     avatarImg: avatarImg1,
     bgImg: bgImg1,
@@ -31,14 +39,6 @@ export const liveList = [
     title: '直播吃饭, 月入百万',
     status: '即将开始',
     time: '2018-08-30 19:30'
-  },
-  {
-    emcee: 'Front End',
-    avatarImg: avatarImg2,
-    bgImg: bgImg4,
-    title: '论合理需求避免干架的重要性',
-    status: '即将开始',
-    timeCount: '00:30:20'
   }
 ]
 
