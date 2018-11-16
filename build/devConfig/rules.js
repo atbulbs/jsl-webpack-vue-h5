@@ -1,14 +1,6 @@
-const resolve = require('../utils/resolve')
 const commonRules = require('../commonRules')
 
 const devRules = [
-  {
-    enforce: 'pre',
-    test: /.(jsx?|vue)$/,
-    loader: 'eslint-loader',
-    include: resolve('src'),
-    exclude: /node_modules/
-  },
   {
     test: /\.styl(us)?$/,
     use: [
@@ -21,20 +13,6 @@ const devRules = [
         }
       },
       'stylus-loader'
-    ]
-  },
-  {
-    test: /\.less$/,
-    use: [
-      'vue-style-loader',
-      'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          sourceMap: true
-        }
-      },
-      'less-loader'
     ]
   }
 ]

@@ -20,25 +20,6 @@ const prodRules = [
       },
       'stylus-loader'
     ]
-  },
-  {
-    test: /\.less$/,
-    use: [
-      MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader',
-        options: {
-          minimize: true
-        }
-      },
-      {
-        loader: 'postcss-loader',
-        options: {
-          sourceMap: true
-        }
-      },
-      'less-loader'
-    ]
   }
 ]
 
