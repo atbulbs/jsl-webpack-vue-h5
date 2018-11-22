@@ -15,6 +15,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "fastclick": "^1.0.6",
+    "viewport-units-buggyfill": "^0.6.2",
     "vue": "^2.5.17",
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",

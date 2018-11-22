@@ -29,7 +29,6 @@ export default {
   >.back
     with-bg(9px, 17px, './back-arrow.png')
     ab-l(18px)
-    extend-click()
   >.title
     color #1F2845
     letter-spacing -0.43px

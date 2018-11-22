@@ -11,6 +11,12 @@ import 'styles/index.styl'
 import store from './store'
 import axios from 'axios'
 
+const vub = require('viewport-units-buggyfill')
+
+window.addEventListener('load', () => {
+  vub.init({ hacks: window.viewportUnitsBuggyfillHacks })
+})
+
 // import { wechatConfig } from 'shared/wechat-config'
 
 // wechatConfig()
