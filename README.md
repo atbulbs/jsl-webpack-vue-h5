@@ -5,7 +5,7 @@
 
 >npm package  [https://www.npmjs.com/package/jsl-vue-h5](https://www.npmjs.com/package/jsl-vue-h5)
 
->git仓库  [https://github.com/jsl/jsl-vue-h5](https://github.com/8bulbs/jsl-vue-h5)
+>git仓库  [https://github.com/atbulbs/jsl-vue-h5](https://github.com/8bulbs/jsl-vue-h5)
 
 >demo online [https://atbulbs.github.io/jsl-vue-h5-demo-online/]( https://8bulbs.github.io/jsl-vue-h5-demo-online/)
 
